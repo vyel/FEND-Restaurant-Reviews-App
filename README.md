@@ -8,31 +8,29 @@ Project 6 of the [Udacity Front-End Web Developer Nanodegree program](https://eu
 * [Installation](#installation)
 * [How to Use the App](#how-to-use-the-app)
 * [Dependencies](#dependencies)
-* [Contributing](#contributing)
-* [License](#license)
 
 ### Project Overview
 
 The goal of the project was to convert a static site that lacks accesibility into a fully responsive site, to implement accessibility features for screen reader use and to add a ServiceWorker script to cache requests to all of the site's assets so that any page that has been visited by a user will be accessible when the user is offline.
 
-We were provided with a [started repository](https://github.com/udacity/mws-restaurant-stage-1) to serve as our baseline to begin development.
+We were provided with a [starter code](https://github.com/udacity/mws-restaurant-stage-1) to serve as our baseline to begin development.
 
 ### Installation
 
-1. Clone or download this repository
-2. Open the command prompt
-3. Navigate to the directory using the cd command
-4. Enter the command to start up a server on port 8000 (see more details below)
-5. Open your browser at the address `localhost:8000`
-
-This app must be loaded using a local server. Start up a simple HTTP server to serve up the site files on your local computer. Python is a simple option for this. In a terminal, check to see if you have Python already installed by running `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`, or `py -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-
-This app is set up to serve data from port 8000. You can change the port number in the `js/dbhelper.js` file:
-
-    static get DATABASE_URL() {
-      const port = 8000;  // <-- change to your preferred port
-      return `http://localhost:${port}/data/restaurants.json`;
-    }
+1. Clone or download this repository and cd into the project's directory
+2. Start a simple HTTP server to serve up the website's files on your local computer:
+	- Install [Python](https://www.python.org/downloads/) or check which version you are using by running `python -V`
+	- If you have Python 2.x, start the server by running the command  `python -m SimpleHTTPServer 8000`. For Python 3.x, run the command `python3 -m http.server 8000`.
+	- This app is set up to serve data from port 8000. If you already have something running on port 8000, change the port number in the `js/dbhelper.js` file,
+		```
+        static get DATABASE_URL() {
+          const port = 8000;  // <-- change to your preferred port
+          return `http://localhost:${port}/data/restaurants.json`;
+        }
+    	```
+    	then run the server command followed by your chosen port number.
+    - Note to myself:exclamation: Start up the server by running the command `py -m http.server 8000`.
+3. Open the project in a browser of your choice at `localhost:8000`
 
 ### How to Use the App
 
@@ -44,8 +42,3 @@ This app is set up to serve data from port 8000. You can change the port number 
 * [Google Normalize.css](https://code.google.com/archive/p/normalize-css/)
 * [Google Maps API](https://developers.google.com/maps/documentation/)
 
-### Contributing
-This repository contains the files of the 6th project for [Udacity Front-End Web Developer Nanodegree Program](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001) as they were submitted for review. Hence, pull requests will most likely not be accepted.
-
-### License
-None
