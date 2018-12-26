@@ -159,10 +159,10 @@ createReviewHTML = (review) => {
   let emptyStars = 5 - review.rating;
 
   for (let i=0; i<review.rating; i++) {
-  	stars += '<img class="stars" src="../img/star.svg" alt="star icon">';
+  	stars += '<img class="stars" src="./../img/star.svg" alt="star icon">';
   }
   for (let i=0; i<emptyStars; i++){
-    stars += '<img class="stars" src="../img/emptyStar.svg" alt="empty star icon">';
+    stars += '<img class="stars" src="./../img/emptyStar.svg" alt="empty star icon">';
   }
   rating.innerHTML = `Rating: <span class="stars" aria-hidden="true" >${stars}</span>`;
   rating.classList.add("rating");
