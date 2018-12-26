@@ -5,6 +5,7 @@ Project 6 of the [Udacity Front-End Web Developer Nanodegree program](https://eu
 ### Table of Contents
 
 * [Project Overview](#project-overview)
+* [Live Version](#live-version)
 * [Installation](#installation)
 * [How to Use the App](#how-to-use-the-app)
 * [Dependencies](#dependencies)
@@ -14,6 +15,10 @@ Project 6 of the [Udacity Front-End Web Developer Nanodegree program](https://eu
 The goal of the project was to convert a static site that lacks accesibility into a fully responsive site, to implement accessibility features for screen reader use and to add a ServiceWorker script to cache requests to all of the site's assets so that any page that has been visited by a user will be accessible when the user is offline.
 
 We were provided with a [starter code](https://github.com/udacity/mws-restaurant-stage-1) to serve as our baseline to begin development.
+
+### Live Version
+
+Check the live version of the project at https://vyel.github.io/FEND-Restaurant-Reviews-App/
 
 ### Installation
 
