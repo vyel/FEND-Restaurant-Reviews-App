@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="description" content="Udacity FEND Nanodegree Project 6, Restaurant Reviews App - Stage 1">
+  <meta name="author" content="T.Violeta">
+  <!-- Normalize.css for better cross-browser consistency -->
+	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <!-- Main CSS file -->
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Restaurant Reviews</title>
+</head>
+
+<body>
+ 	<!-- Beginning header-->
+  <header role="banner">
+    <nav>
+      <h1>
+        <a href="/">Restaurant Reviews</a>
+      </h1>
+    </nav>
+  </header>
+  <!-- End header-->
+
+	<!-- Beginning main -->
+  <main id="maincontent" role="main">
+  	<!-- Skip map navigation -->
+  	<a href="#restaurants-content" class="skip-map-navigation">Skip Google map navigation</a>
+    <!--  Beginning Google map    -->
+    <section id="map-container">
+      <div id="map" aria-label="Google map application" role="application"></div>
+    </section>
+    <!-- End map -->
+
+    <!--  Restaurant and filter options    -->
+    <section id="restaurants-content">
+    	<!-- Filter options-->
+      <div class="filter-options">
+        <h2>Filter Results</h2>
+        <!-- Neighborhoods filter option -->
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="select neighborhood">
+          <option value="all">All Neighborhoods</option>
+        </select>
+        <!--  Cuisines filter option -->
+        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="select cuisine">
+          <option value="all">All Cuisines</option>
+        </select>
+      </div>
+      <!-- Restaurants list -->
+      <ul id="restaurants-list"></ul>
+    </section>
+  </main>
+  <!-- End main -->
+
+  <!-- Beginning footer -->
+  <footer id="footer" role="contentinfo">
+    Copyright &copy; 2018
+    <a href="/">
+      <strong>Restaurant Reviews</strong>
+    </a> All Rights Reserved.
+  </footer>
+  <!-- End footer -->
+
+	<!-- Beginning scripts -->
+  <!-- Service worker -->
+  <script type="application/javascript" charset="utf-8" src="sw.js"></script>
+  <!-- Database helpers -->
+  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+  <!-- Main javascript file -->
+  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+  <!-- Google Maps -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe7YoxhQHAdoOzFnzk31XbFiUAjxFKO1w&libraries=places&callback=initMap"></script>
+
+</body>
+
+</html>
